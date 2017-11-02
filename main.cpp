@@ -16,10 +16,18 @@ using namespace std;
 int main(void) {
 int a = 8, b = 0, c = 0; 
 cin >> b;
-try {
-  //Your code here
-c = a / b; }
- // Your code here
- cout << c << endl;
+try {    
+        if(b >0){
+            c = a / b;        
+    }
+        else{
+            throw string("Houston, we have a problem");
+        }
+}
+catch(string &issue)
+{
+    cout << "Your Input is not valid, you can't divide by zero" << endl;
+}
+cout << c << endl;
 return 0; }
 
